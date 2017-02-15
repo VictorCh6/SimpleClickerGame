@@ -12,7 +12,7 @@ public class GameplayScreen extends AbstractScreen {
 		init();
 	}
 
-	private void init() {
+	protected void init() {
 		initPlayer();
 	}
 

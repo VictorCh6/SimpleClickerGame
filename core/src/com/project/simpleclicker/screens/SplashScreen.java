@@ -22,7 +22,7 @@ public class SplashScreen extends AbstractScreen{
 		}, 3);
 	}
 
-	private void init() {	
+	protected void init() {	
 		splashImg = new Texture("badlogic.jpg");
 		
 	}
