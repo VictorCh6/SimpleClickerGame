@@ -1,33 +1,39 @@
 package com.project.simpleclicker;
 
-import com.badlogic.gdx.ApplicationAdapter;
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.project.simpleclicker.screens.SplashScreen;
 
-public class SimpleClicker extends ApplicationAdapter {
-	SpriteBatch batch;
-	Texture img;
+public class SimpleClicker extends Game{
+	
+	public final static String GAME_NAME = "Simple Clicker";
+	//public final static String GAME_NAME = "";
+	
+	public static int WIDTH= 480;
+	public static int HEIGHT= 700;
+	
+	private boolean paused;
 	
 	@Override
 	public void create () {
-		batch = new SpriteBatch();
-		img = new Texture("badlogic.jpg");
+		this.setScreen(new SplashScreen(this));
 	}
 
-	@Override
-	public void render () {
-		Gdx.gl.glClearColor(1, 0, 0, 1);
-		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-		batch.begin();
-		batch.draw(img, 0, 0);
-		batch.end();
-	}
+
+	/**
+	 * ---------------------
+	 * getters and setters
+	 * 
+	 */
 	
-	@Override
-	public void dispose () {
-		batch.dispose();
-		img.dispose();
+	public boolean isPaused() {
+		return paused;
+	}
+
+	public void setPaused(boolean paused) {
+		this.paused = paused;
 	}
 }
