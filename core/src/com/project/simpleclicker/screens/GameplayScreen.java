@@ -48,8 +48,6 @@ private void initActionController() {
 		super.render(delta);
 		update();
 		
-		System.out.println("Points: "+game.getPoints());
-		
 		spriteBatch.begin();
 		stage.draw();
 		spriteBatch.end();
