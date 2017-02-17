@@ -6,12 +6,13 @@ import com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle;
 import com.project.simpleclicker.SimpleClicker;
 import com.project.simpleclicker.controllers.ActionButtonController;
 import com.project.simpleclicker.entities.Player;
+import com.project.simpleclicker.ui.ResetButton;
 
 public class GameplayScreen extends AbstractScreen {
 	
 	private Player player;
-	private ActionButtonController actionController;
 	private Label scoreLabel;
+
 	
 	public GameplayScreen(SimpleClicker game){
 		super(game);
@@ -22,20 +23,25 @@ public class GameplayScreen extends AbstractScreen {
 		initPlayer();
 		initActionController();
 		initScoreLabel();
+		initResetButton();
 	}
 
 	
+private void initResetButton() {
+	new ResetButton(stage);
+}
+
 private void initScoreLabel() {
 	LabelStyle labelStyle = new LabelStyle();
 	labelStyle.font = new BitmapFont();
 	scoreLabel = new Label((""), labelStyle);
 	scoreLabel.setX(20);
-	scoreLabel.setY(659);
+	scoreLabel.setY(660);
 	stage.addActor(scoreLabel);
 	}
 
 private void initActionController() {
-		actionController = new ActionButtonController(game, stage);
+	  new ActionButtonController(game, stage);
 	}
 	
 	private void initPlayer() {
