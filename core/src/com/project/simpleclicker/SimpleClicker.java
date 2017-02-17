@@ -39,11 +39,20 @@ public class SimpleClicker extends Game{
 
 	public void addPoints(){
 		points++;
+		updateSavedScore();
+	}
+
+	
+	public void resetScore() {
+		points = 0;
+		updateSavedScore();
+		
+	}
+	
+	private void updateSavedScore() {
 		prefs.putInteger(GAME_SCORE, points);
 		prefs.flush();
 	}
-
-
 	/**
 	 * ---------------------
 	 * getters and setters
@@ -62,7 +71,5 @@ public class SimpleClicker extends Game{
 	public int getPoints() {
 		return points;
 	}
-
-
 	
 }

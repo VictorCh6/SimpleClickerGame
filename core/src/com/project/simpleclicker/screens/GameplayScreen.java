@@ -28,7 +28,7 @@ public class GameplayScreen extends AbstractScreen {
 
 	
 private void initResetButton() {
-	new ResetButton(stage);
+	new ResetButton(stage, game);
 }
 
 private void initScoreLabel() {

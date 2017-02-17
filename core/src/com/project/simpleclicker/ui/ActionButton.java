@@ -8,8 +8,7 @@ public class ActionButton extends Button {
 
 	public ActionButton(final IClickCallback callback, int y){
 		super(new ButtonStyle());
-		init(callback, y);
-		
+		init(callback, y);		
 	}
 
 	
