@@ -41,6 +41,11 @@ public class SimpleClicker extends Game{
 		points++;
 		updateSavedScore();
 	}
+	
+	public void addPointsExtra(int toAdd){
+		points += toAdd;
+		updateSavedScore();
+	}
 
 	
 	public void resetScore() {
