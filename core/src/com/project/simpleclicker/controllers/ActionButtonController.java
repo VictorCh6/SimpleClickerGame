@@ -35,7 +35,7 @@ public class ActionButtonController {
 				game.addPoints();
 				System.out.println("Action Button1");
 			}
-		}, 100);
+		}, 290);
 		stage.addActor(actionButton);
 		/*
 		 * ACTION BUTTON 2 Action
@@ -48,7 +48,7 @@ public class ActionButtonController {
 				game.addPoints();
 				System.out.println("Action Button2");
 			}
-		}, 30);
+		}, 50);
 		stage.addActor(actionButton2);
 
 	}		

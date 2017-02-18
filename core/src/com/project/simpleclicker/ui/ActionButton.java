@@ -6,17 +6,17 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
 public class ActionButton extends Button {
 
-	public ActionButton(final IClickCallback callback, int y){
+	public ActionButton(final IClickCallback callback, int x){
 		super(new ButtonStyle());
-		init(callback, y);		
+		init(callback, x);		
 	}
 
 	
-	private void init(final IClickCallback callback,int y) {
-		this.setWidth(420);
+	private void init(final IClickCallback callback,int x) {
+		this.setWidth(140);
 		this.setHeight(50);
-		this.setX(30);
-		this.setY(y);
+		this.setX(x);
+		this.setY(110);
 		this.setDebug(true);
 		
 		this.addListener(new ClickListener(){
@@ -31,4 +31,6 @@ public class ActionButton extends Button {
 		});
 		
 	}
+	
+	
 }
