@@ -34,7 +34,7 @@ public class GameplayScreen extends AbstractScreen {
 
 		
 	private void initFlyingLivestock() {
-		flyingLivestock = new FlyingLivestock();
+		flyingLivestock = new FlyingLivestock(FlyingLivestock.PIG);
 		stage.addActor(flyingLivestock);
 		flyingLivestock.fly();
 	}

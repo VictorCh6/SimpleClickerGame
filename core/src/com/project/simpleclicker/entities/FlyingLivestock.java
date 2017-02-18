@@ -18,8 +18,8 @@ public class FlyingLivestock extends Image {
 	private final static int STARTING_Y = -100;
 	
 	
-	public FlyingLivestock(){
-		super(new Texture(PIG));
+	public FlyingLivestock(String texture){
+		super(new Texture(texture));
 		
 		this.setOrigin(WIDHT/2, HEIGHT/2);
 		this.setSize(WIDHT, HEIGHT);
