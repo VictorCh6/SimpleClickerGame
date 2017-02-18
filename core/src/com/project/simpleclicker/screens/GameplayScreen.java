@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.project.simpleclicker.SimpleClicker;
 import com.project.simpleclicker.controllers.ActionButtonController;
+import com.project.simpleclicker.entities.FlyingLivestock;
 import com.project.simpleclicker.entities.Player;
 import com.project.simpleclicker.ui.ResetButton;
 import com.project.simpleclicker.ui.ScoreLabel;
@@ -13,6 +14,7 @@ public class GameplayScreen extends AbstractScreen {
 	private Image background;
 	private Player player;
 	private ScoreLabel scoreLabel;
+	private FlyingLivestock flyingLivestock;
 
 	
 	public GameplayScreen(SimpleClicker game){
@@ -27,9 +29,16 @@ public class GameplayScreen extends AbstractScreen {
 		initActionController();
 		initScoreLabel();
 		initResetButton();
+		initFlyingLivestock();
 	}
 
 		
+	private void initFlyingLivestock() {
+		flyingLivestock = new FlyingLivestock();
+		stage.addActor(flyingLivestock);
+		flyingLivestock.fly();
+	}
+
 	private void initBackground() {
 		background = new Image(new Texture("background.png"));
 		stage.addActor(background);
