@@ -35,7 +35,7 @@ public class FlyingLivestockController {
 					}
 				}, spawnTime);
 			}
-		}, 5, 7);
+		}, 0, 5);
 	}
 
 	private void addNewLivestock(SimpleClicker game, Stage stage) {
