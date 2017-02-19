@@ -23,30 +23,39 @@ public class FlyingLivestockController {
 			
 			@Override
 			public void run() {
-				
-				FlyingLivestock flyingLivestock = null;
-				
-				switch(MathUtils.random(1, 7)){
-				case 1:{	flyingLivestock = new FlyingLivestock(FlyingLivestockType.PIG, game); break;}
-				case 2:{	flyingLivestock = new FlyingLivestock(FlyingLivestockType.COW, game); break;}
-				case 3:{	flyingLivestock = new FlyingLivestock(FlyingLivestockType.RABBIT, game); break;}
-				case 4:{	flyingLivestock = new FlyingLivestock(FlyingLivestockType.SHEEP, game); break;}
-				case 5:{	flyingLivestock = new FlyingLivestock(FlyingLivestockType.FOX, game); break;}
-				case 6:{	flyingLivestock = new FlyingLivestock(FlyingLivestockType.CRAZYPIG, game); break;}
-				case 7:{	flyingLivestock = new FlyingLivestock(FlyingLivestockType.BADCAT, game); break;}
-				//default: break;
-				}
-				stage.addActor(flyingLivestock);
-				flyingLivestock.fly();
-				
+				addNewLivestock(game, stage);
 				randomizeSpawnTime();
-				
+				Timer.schedule(new Task() {
+					
+					@Override
+					public void run() {
+						addNewLivestock(game, stage);
+						randomizeSpawnTime();
+						
+					}
+				}, spawnTime);
 			}
-		}, spawnTime, spawnTime);
+		}, 5, 7);
+	}
+
+	private void addNewLivestock(SimpleClicker game, Stage stage) {
+		FlyingLivestock flyingLivestock = null;
+		
+		switch(MathUtils.random(1, 7)){
+		case 1:{	flyingLivestock = new FlyingLivestock(FlyingLivestockType.PIG, game); break;}
+		case 2:{	flyingLivestock = new FlyingLivestock(FlyingLivestockType.COW, game); break;}
+		case 3:{	flyingLivestock = new FlyingLivestock(FlyingLivestockType.RABBIT, game); break;}
+		case 4:{	flyingLivestock = new FlyingLivestock(FlyingLivestockType.SHEEP, game); break;}
+		case 5:{	flyingLivestock = new FlyingLivestock(FlyingLivestockType.FOX, game); break;}
+		case 6:{	flyingLivestock = new FlyingLivestock(FlyingLivestockType.CRAZYPIG, game); break;}
+		case 7:{	flyingLivestock = new FlyingLivestock(FlyingLivestockType.BADCAT, game); break;}
+		default: break;
+		}
+		stage.addActor(flyingLivestock);
+		flyingLivestock.fly();		
 	}
 
 	private void randomizeSpawnTime() {
-		spawnTime = MathUtils.random(2, 10);
+		spawnTime = MathUtils.random(5, 10);
 	}
-	
 }
