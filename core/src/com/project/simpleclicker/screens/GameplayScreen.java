@@ -19,7 +19,6 @@ public class GameplayScreen extends AbstractScreen {
 	
 	public GameplayScreen(SimpleClicker game){
 		super(game);
-		init();
 	}
 
 	protected void init() {
@@ -30,10 +29,13 @@ public class GameplayScreen extends AbstractScreen {
 		initScoreLabel();
 		initResetButton();
 		initFlyingLivestockController();
-		
+		playMusic();
 	}
 
-		
+	private void playMusic() {
+		game.getSoundService().playGameMusic(true);
+	}
+
 	private void initFlyingLivestockController() {
 		flyingLivestockController = new FlyingLivestockController(game, stage);
 	}

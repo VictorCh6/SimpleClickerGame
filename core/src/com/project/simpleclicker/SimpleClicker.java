@@ -4,6 +4,7 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Preferences;
 import com.project.simpleclicker.screens.SplashScreen;
+import com.project.simpleclicker.service.SoundService;
 
 public class SimpleClicker extends Game{
 	
@@ -14,6 +15,8 @@ public class SimpleClicker extends Game{
 		
 	public static int WIDTH= 480;
 	public static int HEIGHT= 700;
+	
+	private SoundService soundService;
 	
 	private boolean paused;
 	
@@ -30,6 +33,11 @@ public class SimpleClicker extends Game{
 	private void init() {
 		prefs = Gdx.app.getPreferences(GAME_PREFERENCES);
 		loadScore();
+		initSoundService();
+	}
+
+	private void initSoundService() {
+		soundService = new SoundService();
 	}
 
 	private void loadScore() {
@@ -76,5 +84,10 @@ public class SimpleClicker extends Game{
 	public int getPoints() {
 		return points;
 	}
+
+	public SoundService getSoundService() {
+		return soundService;
+	}
+
 	
 }
