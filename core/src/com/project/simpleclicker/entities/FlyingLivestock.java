@@ -15,13 +15,13 @@ public class FlyingLivestock extends Image {
 		PIG, COW, RABBIT, SHEEP, FOX, CRAZYPIG, BADCAT,
 	}
 
-	public final static String PIG = "pig.png";
-	public final static String RABBIT = "rabbit.png";
-	public final static String SHEEP = "sheep.png";
-	public final static String CRAZYPIG = "crazypig.png";
-	public final static String FOX = "fox.png";
-	public final static String COW = "cow.png";
-	public final static String BADCAT = "badcat.png";
+	public final static String PIG = "img/pig.png";
+	public final static String RABBIT = "img/rabbit.png";
+	public final static String SHEEP = "img/sheep.png";
+	public final static String CRAZYPIG = "img/crazypig.png";
+	public final static String FOX = "img/fox.png";
+	public final static String COW = "img/cow.png";
+	public final static String BADCAT = "img/badcat.png";
 	
 	private final static int WIDHT = 150;
 	private final static int HEIGHT = 150;

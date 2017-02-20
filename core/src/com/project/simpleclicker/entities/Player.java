@@ -12,7 +12,7 @@ public class Player extends Image {
 	private static final int STARTING_Y = 530;
 	
 	public Player(){
-		super(new Texture("machete.png"));
+		super(new Texture("img/machete.png"));
 		
 		this.setOrigin(WIDHT / 2, HEIGTH / 2);
 		this.setSize(WIDHT, HEIGTH);

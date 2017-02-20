@@ -42,7 +42,7 @@ public class GameplayScreen extends AbstractScreen {
 
 
 	private void initBackground() {
-		background = new Image(new Texture("background.png"));
+		background = new Image(new Texture("img/background.png"));
 		stage.addActor(background);
 	}
 
